@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
 body {
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 header{
@@ -9,10 +12,12 @@ main{
 }
 
 p{
+    font-size: 20px
 }
 
 .navigation{
     background-color: #ffb700;
+    font-family: 'Inconsolata', monospace;
     padding: 10px;
     display: flex;
     align-items: center;
