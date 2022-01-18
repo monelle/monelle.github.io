@@ -1,0 +1,72 @@
+body {
+}
+
+header{
+}
+
+main{
+    display:flex;
+}
+
+p{
+}
+
+.navigation{
+    background-color: #ffb700;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.h1{
+    color: #252525;
+    font-size: 20px;
+}
+
+.introduction{
+    background-color: #ffb700;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;  /*aligns img-container and bio-container vertically*/
+    flex-wrap: wrap;          /*displays pic and text atop each other on narrow screens*/
+}
+
+.image-container{
+    width: 50%;              /*occupies half the space of its parent, introduction*/
+    display: flex;   
+    justify-content: center; /*centres the actual picture in the container*/
+}
+
+.profile-pic{
+    width: 60%;
+    padding: 15%;
+}
+
+.bio-container{
+    width:50%;              /*occupies half the space of its parent, introduction*/
+    padding: 50px
+}
+
+@media (min-width: 600px){
+    .top-navigationx{
+        height: 100 px;
+    }
+
+    .introduction{
+        display:flex;
+        flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
+    }
+}
+
+
+@media (min-width: 900px){
+    .top-navigation{
+        height: 100px;
+    }
+    .introduction{
+        display:flex;
+        flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
+    }
+}
