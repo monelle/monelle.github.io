@@ -4,19 +4,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif
 }
 
-header{
-}
-
-main{
-    display:flex;
-}
-
-p{
-    font-size: 20px
-}
-
-.navigation{
-    background-color: #ffb700;
+nav{
+    background-color: #ffd755;
     font-family: 'Inconsolata', monospace;
     padding: 10px;
     display: flex;
@@ -25,13 +14,21 @@ p{
     justify-content: space-between;
 }
 
-.h1{
+a{
     color: #252525;
     font-size: 20px;
 }
 
+p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form{
+    display: table-caption
+}
 .introduction{
-    background-color: #ffb700;
+    background-color: #ffd755;
     margin-top: 6px;
     display: flex;
     justify-content: center;  /*aligns img-container and bio-container vertically*/
@@ -51,7 +48,25 @@ p{
 
 .bio-container{
     width:50%;              /*occupies half the space of its parent, introduction*/
-    padding: 50px
+    padding: 50px;
+}
+
+.h1{
+    color: #252525;
+    font-size: 20px;
+}
+
+.form-container{
+    background-color: #ffd755;
+    margin-top: 6px;
+    padding: 35px;
+}
+
+.form-item{
+    font-family: 'Inconsolata', monospace;
+    font-size: medium;
+    color: #252525;
+    
 }
 
 @media (min-width: 600px){
@@ -63,8 +78,12 @@ p{
         display:flex;
         flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
     }
-}
 
+    .form-container{
+        padding: 100px;
+        font-size: large;
+    }
+}
 
 @media (min-width: 900px){
     .top-navigation{
@@ -74,4 +93,3 @@ p{
         display:flex;
         flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
     }
-}
