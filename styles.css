@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Inconsolata:wght@600&display=swap');
 
-body {
-    font-family: Georgia, 'Times New Roman', Times, serif
-}
+/* body { */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+/* } */
 
 nav{
     background-color: #ffd755;
     font-family: 'Inconsolata', monospace;
+    font-size: small;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -19,9 +21,27 @@ a{
     font-size: 20px;
 }
 
-p{
+h1{
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-size: 36px;
+}
+
+h2{
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.monospace{
+    font-family: 'Inconsolata', monospace;
+    font-size: medium;
 }
 
 form{
@@ -47,13 +67,22 @@ form{
 }
 
 .bio-container{
-    width:50%;              /*occupies half the space of its parent, introduction*/
+    width:50%;             /* occupies half the space of its parent, introduction*/
     padding: 50px;
 }
 
-.h1{
-    color: #252525;
-    font-size: 20px;
+.projects-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.project{
+    background-color: #ffd755;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 6px;
 }
 
 .form-container{
@@ -79,17 +108,29 @@ form{
         flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
     }
 
+    .project{
+        width: 33.33%;
+        margin-right: 6px;
+    }
+
+    .projects-container{
+        display:flex;
+        flex-wrap: nowrap;
+        /* margin-left: 6px; */
+    }
     .form-container{
         padding: 100px;
         font-size: large;
     }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px){ /*pretty useless as is. Might be handy to adjust font sizes.*/
     .top-navigation{
         height: 100px;
     }
+
     .introduction{
         display:flex;
         flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
     }
+}
