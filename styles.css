@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&family=Inconsolata:wght@600&display=swap');
 
-/* body { */
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
-/* } */
+body {
+
+}
 
 nav{
     background-color: #ffd755;
@@ -18,69 +17,130 @@ nav{
 
 a{
     color: #252525;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+a:hover{
+    color: magenta;
 }
 
 h1{
     color: #252525;
     font-family: 'Roboto', sans-serif;
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
-    font-size: 36px;
+    font-size: 40px;
+    line-height: 1.5em;
 }
 
 h2{
     color: #252525;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 26px;
+    /* line-height: 0.5em; */
 }
+
+h2:active{
+    color: magenta;
+}
+
+h3{
+    color: #252525;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
 p{
     color: #252525;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
-.monospace{
+
+footer{
+    background-color: #ffd755;
+    margin-top: 6px;
     font-family: 'Inconsolata', monospace;
-    font-size: medium;
+    display:flex;
+    justify-content: center;
 }
 
 form{
     display: table-caption
 }
-.introduction{
-    background-color: #ffd755;
-    margin-top: 6px;
-    display: flex;
-    justify-content: center;  /*aligns img-container and bio-container vertically*/
-    flex-wrap: wrap;          /*displays pic and text atop each other on narrow screens*/
+
+label{
+    font-family: 'Inconsolata', monospace;
+    font-size: large;
 }
 
-.image-container{
-    width: 50%;              /*occupies half the space of its parent, introduction*/
-    display: flex;   
-    justify-content: center; /*centres the actual picture in the container*/
+input{
+    width:220px;
+    height:20px;
 }
 
-.profile-pic{
-    width: 60%;
-    padding: 15%;
+textarea{
+    width:220px;
+    height:50px;
+}
+
+button{
+    font-family: 'Inconsolata', monospace;
+    font-size: small;
+    background-color: #fbb433;
+    color: #252525;
+}
+.monospace{
+    font-family: 'Inconsolata', monospace;
+    font-size: large;
+    line-height: 1.25em;
+    padding:2px;
+}
+p.monospace{
+    height: 190px;
 }
 
 .bio-container{
-    width:50%;             /* occupies half the space of its parent, introduction*/
+    padding: 20px;
+}
+
+.bio{
+    background-color: #ffd755;
+    margin-top: 6px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;    /*aligns img-container and bio-container vertically*/
+    flex-wrap: wrap;            /*displays pic and text atop each other on narrow screens*/
+}
+
+.list{
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    color:#252525;
+    line-height: 1.5em
+}
+
+.image-container{
     padding: 50px;
+    display: flex;   
+    justify-content: center;    /*centres the actual picture in the container*/
+}
+
+.profile-pic{
+    width: 70%;
+    padding: 20px;
 }
 
 .projects-container{
     display: flex;
     flex-wrap: wrap;
-    align-content: center;
 }
 
 .project{
     background-color: #ffd755;
     display: flex;
     flex-wrap: wrap;
+    align-items: top;
     padding: 10px;
     margin-top: 6px;
 }
@@ -95,42 +155,114 @@ form{
     font-family: 'Inconsolata', monospace;
     font-size: medium;
     color: #252525;
-    
 }
 
-@media (min-width: 600px){
+.bottom-container{
+    background-color: #ffd755;
+    text-align: center;
+    margin-top: 6px;
+    padding: 25px;
+}
+.footer-box{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 50%;
+}
+
+.footer-monospace{
+    font-family: 'Inconsolata', monospace;
+    font-size: small;
+    color:#252525;
+    margin: 0px;
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 600px){          /*fixes display for tablets and above*/
     .top-navigationx{
         height: 100 px;
     }
 
-    .introduction{
+    .bio-container{
+        width:50%;                  /* occupies half the space of its parent, introduction*/
+        padding: 50px;
+    }
+
+    .bio{
         display:flex;
-        flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
+        flex-wrap: nowrap;          /*displays pic and text side-by-side as screen gets wider*/
+    }
+
+    .image-container{
+        width: 50%;                 /*occupies half the space of its parent, introduction*/
+        display: flex;   
+        justify-content: center;    /*centres the actual picture in the container*/
     }
 
     .project{
         width: 33.33%;
         margin-right: 6px;
     }
+    .project:last-child{            /* fixes extra margin on right-hand side container*/
+        margin-right: 0px;
+    }
 
     .projects-container{
         display:flex;
         flex-wrap: nowrap;
-        /* margin-left: 6px; */
     }
+
     .form-container{
         padding: 100px;
         font-size: large;
     }
+
+    input{
+        width:500px;
+        height:20px;
+    }
+    
+    textarea{
+        width:500px;
+        height:50px;
+    }
+
+    .footer-monospace{
+        font-family: 'Inconsolata', monospace;
+        font-size: medium;
+        margin: 0px;
+    }
 }
 
-@media (min-width: 900px){ /*pretty useless as is. Might be handy to adjust font sizes.*/
+@media (min-width: 900px){          /* fixes display for desktops. Mostly handy to adjust font sizes.*/
     .top-navigation{
         height: 100px;
     }
 
-    .introduction{
+    .bio-container{
+        width:50%;                  /* occupies half the space of its parent, introduction*/
+        padding: 50px;
+    }
+
+    .bio{
         display:flex;
-        flex-wrap: nowrap; /*displays pic and text side-by-side as screen gets wider*/
+        flex-wrap: nowrap;          /*displays pic and text side-by-side as screen gets wider*/
+    }
+
+    .image-container{
+        width: 50%;                 /*occupies half the space of its parent, introduction*/
+        display: flex;   
+        justify-content: center;    /*centres the actual picture in the container*/
+    }
+    
+    .profile-pic{
+        width: 50%;
+        padding: 15%;
+    }
+    
+    .footer-monospace{
+        font-size: large;
     }
 }
